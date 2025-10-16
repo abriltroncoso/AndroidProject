@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">BMO</string>
+    <string name="click_me">Click me</string>
+    <string name="como_estas">Como estas?</string>
+    <string name="navegar">navegar</string>
+    <string name="clear">clear</string>
+    <string name="rating">calificacion</string>
+    <string name="game_background">Imagen de fondo del juego</string>
+    <string name="release_date">Fecha de lanzamiento</string>
+    <string name="Filtrar">Filtrar</string>
+    <string name="filtros">Filtros</string>
+    <string name="ordenar_por">Ordenar por</string>
+    <string name="nombre_a_z">Nombre (A-Z)</string>
+    <string name="nombre_z_a">Nombre (Z-A)</string>
+    <string name="m_s_antiguos">Más antiguos</string>
+    <string name="m_s_recientes">Más recientes</string>
+    <string name="mejor_valorados">Mejor valorados</string>
+    <string name="plataformas">Plataformas</string>
+    <string name="g_neros">Géneros</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="t_tulo_del_juego">Título del juego</string>
+    <string name="metacritic">Metacritic</string>
+    <string name="fecha_de_lanzamiento">Fecha de lanzamiento:</string>
+    <string name="plataformas_">Plataformas</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="estad_sticas">Estadísticas</string>
+    <string name="tiempo_de_juego">Tiempo de juego</string>
+    <string name="calificaciones">Calificaciones</string>
+    <string name="clasificaci_n_esrb">Clasificación ESRB:</string>
+    <string name="error_al_cargar_los_juegos">Error al cargar los juegos</string>
+    <string name="reintentar">Reintentar</string>
+    <string-array name="filter_options">
+        <item>Platform</item>
+        <item>Genre</item>
+        <item>Store</item>
+        <item>Publishers</item>
+    </string-array>
+
+    <string-array name="sorting_options">
+        <item>Alfacebetico</item>
+        <item>Fecha de publicacion</item>
+    </string-array>
+
+</resources>

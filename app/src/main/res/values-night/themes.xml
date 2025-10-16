@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Seminario" parent="Theme.Material3.DayNight.NoActionBar">
+         <item name="colorPrimary">@color/md_primary</item>
+        <item name="colorOnPrimary">@color/md_onPrimary</item>
+        <item name="colorPrimaryVariant">@color/md_dark_primary</item>
+
+        <item name="colorSecondary">@color/md_accent</item>
+        <item name="colorOnSecondary">@color/md_onAccent</item>
+
+        <!-- Background / Surface -->
+        <item name="android:colorBackground">@color/md_background</item>
+        <item name="colorOnBackground">@color/md_onBackground</item>
+
+        <item name="colorSurface">@color/md_surface</item>
+        <item name="colorOnSurface">@color/md_onSurface</item>
+
+        <!-- Text defaults (útiles) -->
+        <item name="android:textColorPrimary">@color/md_primary_text</item>
+        <item name="android:textColorSecondary">@color/md_secondary_text</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/md_error</item>
+        <item name="colorOnError">@color/md_onError</item>
+
+
+    </style>
+</resources>

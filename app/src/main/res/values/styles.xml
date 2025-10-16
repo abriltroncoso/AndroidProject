@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WhiteSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/ic_search_ligth</item>
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/md_light_primary</item>
+        <item name="android:textColor">@color/md_light_primary</item>
+
+    </style>
+</resources>

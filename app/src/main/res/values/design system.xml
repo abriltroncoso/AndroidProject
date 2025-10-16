@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primarios -->
+    <color name="md_dark_primary">#512DA8</color>
+    <color name="md_light_primary">#D1C4E9</color>
+    <color name="md_primary">#673AB7</color>
+    <color name="md_onPrimary">#FFFFFF</color>
+    <color name="md_onPrimary_ligth">#000000</color>
+
+
+    <!-- Accent / Secondary -->
+    <color name="md_accent">#FF4081</color>
+    <color name="md_onAccent">#FFFFFF</color>
+
+    <!-- Background / Surface (light) -->
+    <color name="md_background">#FFFFFF</color>
+    <color name="md_onBackground">#212121</color>
+    <color name="md_surface">#FFFFFF</color>
+    <color name="md_onSurface">#212121</color>
+
+    <!-- Text -->
+    <color name="md_primary_text">#000000</color>
+    <color name="md_secondary_text">#757575</color>
+
+    <!-- Divider / bordes -->
+    <color name="md_divider">#BDBDBD</color>
+
+    <!-- Error (opcional) -->
+    <color name="md_error">#B3261E</color>
+    <color name="md_onError">#FFFFFF</color>
+</resources>

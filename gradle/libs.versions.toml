@@ -1,0 +1,48 @@
+[versions]
+agp = "8.13.0"
+kotlin = "1.9.22"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+playServicesMaps = "19.2.0"
+parcelize = "1.9.22"
+hiltVersion= "2.52"
+retrofit = "2.11.0"
+materialVersion = "1.13.0"
+legacySupportV4 = "1.0.0"
+glide = "4.15.1"
+paging = "3.2.1"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+androidx-activityKtx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+hilt-android= {group= "com.google.dagger",name= "hilt-android", version.ref= "hiltVersion"}
+hilt-compiler = {group= "com.google.dagger",name= "hilt-compiler", version.ref= "hiltVersion"}
+retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref= "retrofit"}
+retrofit-gson = {module = "com.squareup.retrofit2:converter-gson", version.ref= "retrofit"}
+google-material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+paging = { group = "androidx.paging", name = "paging-runtime", version.ref = "paging" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+parcelizeKotlinAndroid = { id = "org.jetbrains.kotlin.plugin.parcelize" , version.ref = "parcelize" }
+hilt = {id = "com.google.dagger.hilt.android", version.ref= "hiltVersion"}
+kapt={id= "org.jetbrains.kotlin.kapt", version.ref= "kotlin"}
+
