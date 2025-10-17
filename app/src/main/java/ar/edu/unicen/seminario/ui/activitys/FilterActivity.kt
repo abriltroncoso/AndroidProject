@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlin.apply
 
+
 @AndroidEntryPoint
 class FilterActivity  : AppCompatActivity(){
     lateinit var binding: FiltersBinding
@@ -86,10 +87,9 @@ class FilterActivity  : AppCompatActivity(){
             viewModel.platforms.collect { platforms ->
                 binding.chipGroupPlatforms.removeAllViews()
                 platforms.forEach { platform ->
-                    val chip = Chip(this@FilterActivity).apply {
+                    val chip = layoutInflater.inflate(R.layout.item_filter_chip, binding.chipGroupPlatforms, false) as Chip
+                    chip.apply {
                         text = platform.name
-                        isCheckable = true
-                        setChipBackgroundColorResource(R.color.md_light_primary)
                         setOnCheckedChangeListener { _, isChecked ->
                             if (isChecked) {
                                 selectedPlatforms.add(platform.id.toString())
@@ -107,14 +107,11 @@ class FilterActivity  : AppCompatActivity(){
 
         lifecycleScope.launch {
             viewModel.genres.collect { genres ->
-                android.util.Log.d("FilterActivity", "Genres: ${genres.size}")
                 binding.chipGroupGenres.removeAllViews()
                 genres.forEach { genre ->
-                    val chip = Chip(this@FilterActivity).apply {
+                    val chip = layoutInflater.inflate(R.layout.item_filter_chip, binding.chipGroupGenres, false) as Chip
+                    chip.apply {
                         text = genre.name
-                        isCheckable = true
-                        setChipBackgroundColorResource(R.color.md_light_primary)
-
                         setOnCheckedChangeListener { _, isChecked ->
                             if (isChecked) {
                                 selectedGenres.add(genre.id.toString())

@@ -100,9 +100,6 @@ class MainActivity : AppCompatActivity() {
         val genres = intent.getStringExtra("genres")
         val ordering = intent.getStringExtra("ordering")
         viewModel.applyFilters(platforms,genres,ordering)
-        lifecycleScope.launch {
-             gameAdapter.submitData(PagingData.empty())
-        }
 
 
     }

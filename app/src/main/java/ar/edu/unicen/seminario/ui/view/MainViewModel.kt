@@ -52,11 +52,10 @@ class MainViewModel @Inject constructor(private val ragwRepository: RawgReposito
 
     fun applyFilters(platforms: String? = null, genres: String? = null, ordering: String? = null){
         _filters.value = GameFilters(
-            platforms = platforms,
-            genres = genres,
-            ordering = ordering
+            platforms = platforms.takeIf { it?.isNotBlank() == true },
+            genres = genres.takeIf { it?.isNotBlank() == true },
+            ordering = ordering.takeIf { it?.isNotBlank() == true }
         )
-
     }
 
 
