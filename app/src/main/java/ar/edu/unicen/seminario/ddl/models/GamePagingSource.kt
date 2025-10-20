@@ -10,7 +10,7 @@ class GamePagingSource(
     private val apiKey: String,
     private val platforms: String? = null,
     private val genres: String? = null,
-    private val ordering: String? = null
+    private val ordering: String? = null,
 ) : PagingSource<Int, Game>() {
 
     init {

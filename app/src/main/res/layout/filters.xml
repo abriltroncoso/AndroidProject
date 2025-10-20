@@ -22,7 +22,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="24dp">
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -37,7 +38,8 @@
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:clickable="true"/>
             </LinearLayout>
 
             <!-- Progress Bar -->
@@ -154,33 +156,11 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
 
+
         </LinearLayout>
+        <!-- Botones fijos en la parte inferior -->
     </androidx.core.widget.NestedScrollView>
-    <TextView
-        android:id="@+id/tvErrorFiltros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="error al cargar los filtros"
-        android:textSize="16sp"
-        android:textColor="@color/md_error"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-    <Button
-        android:id="@+id/button_filters_again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvError"
-        android:backgroundTint="@color/md_error"
-        android:textColor="@color/md_onPrimary"
-        android:text="@string/reintentar"
-        android:visibility="invisible"
-        />
-    <!-- Botones fijos en la parte inferior -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -189,6 +169,7 @@
         android:padding="16dp"
         android:background="?android:attr/windowBackground"
         android:elevation="8dp">
+
 
         <Button
             android:id="@+id/btnClearFilters"
@@ -206,6 +187,34 @@
             android:layout_weight="1"
             android:text="@string/aplicar"
             android:layout_marginStart="8dp"/>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/layoutError">
+
+        <TextView
+            android:id="@+id/tvErrorFiltros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error al cargar los filtros"
+            android:textSize="16sp"
+            android:textColor="@color/md_error"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/button_filters_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/md_error"
+            android:textColor="@color/md_onPrimary"
+            android:text="@string/reintentar"/>
+    </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

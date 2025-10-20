@@ -29,12 +29,6 @@ data class GameFilters(
 @HiltViewModel
 class MainViewModel @Inject constructor(private val ragwRepository: RawgRepository ) : ViewModel(){
 
-    private val _loading = MutableStateFlow(false)
-    val loading = _loading.asStateFlow()
-
-    private val _error = MutableStateFlow<String?>(null)
-    val error = _error.asStateFlow()
-
     // Filtros actuales
    private val _filters = MutableStateFlow(GameFilters())
 
@@ -43,11 +37,14 @@ class MainViewModel @Inject constructor(private val ragwRepository: RawgReposito
             Pager(
                     config = PagingConfig(pageSize = 20),
                      pagingSourceFactory = {
-                     GamePagingSource(ragwRepository, Constants.API_KEY,filters.platforms,filters.genres,filters.ordering)
+                     GamePagingSource(ragwRepository,
+                         Constants.API_KEY,
+                         filters.platforms
+                         ,filters.genres,
+                         filters.ordering)
                      }
-                 ).flow
-        }
-            .cachedIn(viewModelScope)
+            ).flow
+        }.cachedIn(viewModelScope)
 
 
     fun applyFilters(platforms: String? = null, genres: String? = null, ordering: String? = null){
@@ -57,6 +54,7 @@ class MainViewModel @Inject constructor(private val ragwRepository: RawgReposito
             ordering = ordering.takeIf { it?.isNotBlank() == true }
         )
     }
+
 
 
 }

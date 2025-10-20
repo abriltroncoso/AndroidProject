@@ -3,6 +3,7 @@ package ar.edu.unicen.seminario.ui.activitys
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -78,9 +79,18 @@ class FilterActivity  : AppCompatActivity(){
         }.launchIn(lifecycleScope)
 
         viewModel.error.onEach { error ->
-            binding.tvError.visibility = if (error != null) View.VISIBLE else View.GONE
-            binding.tvError.text = error
-            binding.buttonFiltersAgain.visibility = if (error != null) View.VISIBLE else View.GONE
+            if (error != null) {
+                binding.layoutError.visibility = View.VISIBLE
+                binding.tvError.text = when {
+                    error.contains("timeout", ignoreCase = true) -> "La conexión tardó demasiado. Verificá tu internet."
+                    error.contains("Unable to resolve host", ignoreCase = true) -> "No se pudo conectar al servidor. ¿Estás conectado?"
+                    else -> "No pudimos cargar los filtros. Intentá nuevamente."
+                }
+                binding.buttonFiltersAgain.visibility = View.VISIBLE
+            } else {
+                binding.layoutError.visibility = View.GONE
+                binding.buttonFiltersAgain.visibility = View.GONE
+            }
         }.launchIn(lifecycleScope)
 
         lifecycleScope.launch {
